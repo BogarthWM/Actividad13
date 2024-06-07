@@ -9,9 +9,9 @@
 </head>
 <body>
 <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">
-                <img src="Img/logo_wn.png" width="250" height="100" class="d-inline-block align-top" alt="Logo">
+                <img src="/logo_wn" width="250" height="100" class="d-inline-block align-top" alt="Logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -19,13 +19,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#inicio">Inicio</a>
+                        <a class="nav-link" href="http://localhost/Actividad13/data/formulario.html">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="data/formulario.html">Solicitud de Inscripcion</a>
+                        <a class="nav-link" href="http://localhost/Actividad13/data/data/formulario.html">Solicitud de Inscripcion</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="admin/log.html">Administrativo</a>
+                        <a class="nav-link" href="/Actividad13/admin/log.html">Administrativo</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#Administrativo">Contacto</a>
