@@ -1,37 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./estilo.css">
-</head>
-<body>
-    <?php
-        //base de datos
-        $servername = "localhost" ;
-        $database = "udeo";
-        $username = "bogar" ;
-        $password = "123";
-        
-        //variables
-        $id = $_POST['id'];
-        $nombre = $_POST['nombre'];
-        
-        //conexion
-        $conexion = mysqli_connect($servername,$username,$password,$database);
+<?php
+$servername = "localhost";
+$database = "udeo";
+$username = "bogar";
+$password = "123";
 
-        //ingresar variable a base de datos
-        $sql = "INSERT INTO nuevo (id,nombre) values ('$id','$nombre')";
+// Conexión a la base de datos
+$conexion = mysqli_connect($servername, $username, $password, $database);
 
-        if(mysqli_query($conexion, $sql)){
-            echo "Datos almacenados correctamente"."<a href='index.html'>Regresar</a>";
-        }else{
-            echo "Ocurrió un error";
-        }
-    ?>
-</body>
-</html>
+// Verificar conexión
+if (!$conexion) {
+    die("Conexión fallida: " . mysqli_connect_error());
+}
+
+// Recibir datos del formulario
+$primer_nombre = $_POST['primer_nombre'];
+$segundo_nombre = $_POST['segundo_nombre'];
+$primer_apellido = $_POST['primer_apellido'];
+$segundo_apellido = $_POST['segundo_apellido'];
+$genero = $_POST['genero'];
+$fecha_nacimiento = $_POST['fecha_nacimiento'];
+$correo_electronico = $_POST['correo_electronico'];
+$telefono = $_POST['telefono'];
+$direccion = $_POST['direccion'];
+$departamento = $_POST['departamento'];
+//$leido = $_POST[false];
+
+$sql = "INSERT INTO usuario (primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, genero, fecha_nacimiento, correo_electronico, telefono, direccion, departamento) VALUES ('$primer_nombre', '$segundo_nombre', '$primer_apellido', '$segundo_apellido', '$genero', '$fecha_nacimiento', '$correo_electronico', '$telefono', '$direccion', '$departamento')";
+
+if (mysqli_query($conexion, $sql)) {
+    echo " <a href='/Actividad13/index.html'>Regresar</a>;";
+} else {
+    
+}
+
+mysqli_close($conexion);
+?>
 
 

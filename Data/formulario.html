@@ -1,27 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
-    <link rel="stylesheet" href="./estilo.css">
+    <title>Formulario de Inscripción de Alumno</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .btn-custom {
+            border-radius: 50px;
+        }
+    </style>
 </head>
 <body>
-    <section class="formulario">
-        <form action="conexion.php" method="post">
-            <h4>Formulario Registro</h4>
-            <input class="campos" type="text" name="id" id="id" placeholder="Ingrese ID" required>
-            <input class="campos" type="text" name="nombre" id="nombre" placeholder="Ingrese Nombres" required >
-            
-            <p>Estoy de acuerdo con <a href="#"> Terminos y condiciones</a></p>
-            <input class="botones" type="submit" value="Registrar">
-            <input class="botones" type="reset" value="Limpiar">
-            <p><a href="#">¿Ya tengo cuenta?</a></p>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+                <img src="/Actividad13//Img/logo_wn.png" width="250" height="100" class="d-inline-block align-top" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/Actividad13/index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="data/formulario.html">Solicitud de Inscripcion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Actividad13/admin/log.html">Administrativo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Administrativo">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        </header>
+        <main>
+            <div class="container">
+                <form action="conexion.php" method="post">
+                    
+                </form>
+                <div class="form-container">
+                    <h2 class="text-center mb-4">Formulario de Inscripción de Alumno</h2>
+                    <form action="conexion.php" method="POST">
+                        
+                        <div class="form-group">
+                            <label for="primer_nombre">Primer Nombre</label>
+                            <input type="text" class="form-control" id="primer_nombre" name="primer_nombre" placeholder="Primer Nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="segundo_nombre">Segundo Nombre</label>
+                            <input type="text" class="form-control" id="segundo_nombre" name="segundo_nombre" placeholder="Segundo Nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="primer_apellido">Primer Apellido</label>
+                            <input type="text" class="form-control" id="primer_apellido" name="primer_apellido" placeholder="Primer Apellido" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="segundo_apellido">Segundo Apellido</label>
+                            <input type="text" class="form-control" id="segundo_apellido" name="segundo_apellido" placeholder="Segundo Apellido">
+                        </div>
+                        <div class="form-group">
+                            <label for="genero">Género</label>
+                            <select class="form-control" id="genero" name="genero" required>
+                                <option value="">Seleccione</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="femenino">Femenino</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="fecha_nacimiento">Fecha de Nacimiento</label>
+                            <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="correo_electronico">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="correo_electronico" name="correo_electronico" placeholder="Correo Electrónico" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Teléfono">
+                        </div>
+                        <div class="form-group">
+                            <label for="direccion">Dirección</label>
+                            <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Dirección">
+                        </div>
+                        <div class="form-group">
+                            <label for="departamento">Departamento</label>
+                            <input type="text" class="form-control" id="departamento" name="departamento" placeholder="Departamento">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block btn-custom">Enviar</button>
+                        
+                    </form>
+                </div>
+            </div>
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-        </form>
-
-
-    </section>
+        </main>
+    
 </body>
 </html>
+
