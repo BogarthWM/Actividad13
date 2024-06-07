@@ -8,7 +8,32 @@
     <link rel="stylesheet" href="/Actividad13/admin/estiloadmin.css">
 </head>
 <body>
-
+<header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+                <img src="Img/logo_wn.png" width="250" height="100" class="d-inline-block align-top" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="data/formulario.html">Solicitud de Inscripcion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin/log.html">Administrativo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Administrativo">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
     <?php
         session_start();
 
@@ -32,7 +57,17 @@
             echo '<script>alert("Usuario o contraseña incorrectos. Por favor, inténtelo de nuevo."); window.location.href = "/Actividad13/admin/log.html";</script>';
         }
     ?>
-
+<main class="main-content" style="background-image: url(''); background-size: cover; background-position: center; height: 100vh;">
+        <!-- Contenido del main -->
+    </main>
+    
+    <footer class="footer mt-auto py-3 bg-dark text-white">
+        <div class="container text-center">
+            <p>&copy; 2024 Universidad de Udeo</p>
+            <p>Contacto: info@udeo.edu</p>
+            <p>Dirección: 123 Calle Principal, Quetzaltenango, Guatemala</p>
+        </div>
+    </footer>
 </body>
 </html>
 
